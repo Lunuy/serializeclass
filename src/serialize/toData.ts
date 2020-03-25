@@ -4,7 +4,7 @@ import { ClassLoader } from "./fromData";
 import InstanceData from "../Data/InstanceData";
 
 
-function toData<ID, DATA>(serializableInstance : SerializableInstance<ID>, classLoader : ClassLoader<ID, DATA>) : InstanceData<ID, DATA> {
+function toData<ID, DATA, INSTANCE extends SerializableInstance<ID>>(serializableInstance : INSTANCE, classLoader : ClassLoader<ID, DATA, INSTANCE>) : InstanceData<ID, DATA> {
     return [
         serializableInstance[ID],
         classLoader(serializableInstance[ID])

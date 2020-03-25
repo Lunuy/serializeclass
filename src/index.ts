@@ -3,7 +3,10 @@ import SerializableClass, { Import, Export } from "./Seirlaizable/SerializableCl
 import SerializableInstance from "./Seirlaizable/SerializableInstance";
 import fromData from "./serialize/fromData";
 import toData from "./serialize/toData";
-
+import ControllerData from "./Controller/Data/ControllerData";
+import SerializableControllerClass from "./Controller/Serializable/SerializableControllerClass";
+import controllerFromData from "./Controller/serialize/controllerFromData";
+import controllerToData from "./Controller/serialize/controllerToData";
 
 export {
     InstanceData,
@@ -14,5 +17,12 @@ export {
     toData,
 
     Import,
-    Export
+    Export,
+
+
+    ControllerData,
+    SerializableControllerClass,
+
+    controllerFromData,
+    controllerToData
 };
