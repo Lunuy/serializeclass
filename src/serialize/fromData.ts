@@ -1,6 +1,6 @@
 import InstanceData from "../Data/InstanceData";
-import SerializableClass, { Import, ID } from "../Seirlaizable/SerializableClass";
-import SerializableInstance from "../Seirlaizable/SerializableInstance";
+import SerializableClass, { Import, ID } from "../Serializable/SerializableClass";
+import SerializableInstance from "../Serializable/SerializableInstance";
 
 export type ClassLoader<ID, DATA, INSTANCE extends SerializableInstance<ID>> = (id : ID) => SerializableClass<ID, DATA, INSTANCE>
 

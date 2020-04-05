@@ -1,7 +1,7 @@
-import { Import, Export } from "../../Seirlaizable/SerializableClass";
+import { Import, Export } from "../../Serializable/SerializableClass";
 import InstanceData from "../../Data/InstanceData";
-import SerializableInstance from "../../Seirlaizable/SerializableInstance";
-import Exportable from "../../Seirlaizable/Exportable";
+import SerializableInstance from "../../Serializable/SerializableInstance";
+import Exportable from "../../Serializable/Exportable";
 
 
 interface SerializableControllerClass<TARGET, ID, DATA, INSTANCE extends SerializableInstance<ID>> extends Exportable<ID, DATA, INSTANCE> {

@@ -1,10 +1,10 @@
-import SerializableInstance from "../Seirlaizable/SerializableInstance";
-import { ID, Export } from "../Seirlaizable/SerializableClass";
-import { ClassLoader } from "./fromData";
+import SerializableInstance from "../Serializable/SerializableInstance";
+import { ID, Export } from "../Serializable/SerializableClass";
 import InstanceData from "../Data/InstanceData";
+import ExportableClassLoader from "../loader/ExportableClassLoader";
 
 
-function toData<ID, DATA, INSTANCE extends SerializableInstance<ID>>(serializableInstance : INSTANCE, classLoader : ClassLoader<ID, DATA, INSTANCE>) : InstanceData<ID, DATA> {
+function toData<ID, DATA, INSTANCE extends SerializableInstance<ID>>(serializableInstance : INSTANCE, classLoader : ExportableClassLoader<ID, DATA, INSTANCE>) : InstanceData<ID, DATA> {
     return [
         serializableInstance[ID],
         classLoader(serializableInstance[ID])

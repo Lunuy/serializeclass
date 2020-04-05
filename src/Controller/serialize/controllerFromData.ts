@@ -1,7 +1,7 @@
 import SerializableControllerClass from "../Serializable/SerializableControllerClass";
-import SerializableInstance from "../../Seirlaizable/SerializableInstance";
+import SerializableInstance from "../../Serializable/SerializableInstance";
 import InstanceData from "../../Data/InstanceData";
-import { Import, ID } from "../../Seirlaizable/SerializableClass";
+import { Import, ID } from "../../Serializable/SerializableClass";
 
 
 export type ControllerClassLoader<TARGET, ID, DATA, INSTANCE extends SerializableInstance<ID>> = (id : ID) => SerializableControllerClass<TARGET, ID, DATA, INSTANCE>
