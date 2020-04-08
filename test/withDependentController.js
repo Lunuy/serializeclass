@@ -137,4 +137,5 @@ console.log(consoleLogCompiler.compile());
 consoleLogCompiler.hasSpace = true;
 console.log(consoleLogCompiler.compile());
 console.log(JSON.stringify(toData(consoleLog, codeClassLoader)));
+
 console.log(JSON.stringify(dependentControllerToData(consoleLogCompiler, compilerClassLoader)));
