@@ -3,7 +3,6 @@ import SerializableInstance from "../../Serializable/SerializableInstance";
 
 
 interface SerializableDependentControllerClass<TARGET, ID, DATA, INSTANCE extends SerializableInstance<ID>> {
-    new (...args : any[]): INSTANCE
     [Import](target : TARGET, data : DATA, fromData : (target : TARGET, instanceData : DATA) => INSTANCE): INSTANCE
     [Export](serializableInstance : INSTANCE, toData : (serializableInstance : INSTANCE) => DATA): DATA
 }
