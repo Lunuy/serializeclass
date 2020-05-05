@@ -1,5 +1,5 @@
 import InstanceData from "./Data/InstanceData";
-import SerializableClass, { Import, Export, ID } from "./Serializable/SerializableClass";
+import SerializableClass, { Import, Export, ID, Controllers } from "./Serializable/SerializableClass";
 import SerializableInstance from "./Serializable/SerializableInstance";
 import fromData from "./serialize/fromData";
 import toData from "./serialize/toData";
@@ -21,6 +21,7 @@ export {
     Import,
     Export,
     ID,
+    Controllers,
 
     SerializableControllerClass,
     controllerFromData,
