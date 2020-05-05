@@ -22,9 +22,10 @@
   },
   "homepage": "https://github.com/Lunuy/serializeclass#readme",
   "devDependencies": {
+    "changy": "^8.0.5",
     "ts-loader": "^6.2.2",
     "typescript": "^3.8.3",
-    "webpack": "^4.42.0",
+    "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
   }

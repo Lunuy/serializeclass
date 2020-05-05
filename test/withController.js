@@ -29,9 +29,6 @@ class Number {
     constructor(value) {
         this.value = value;
     }
-    compile() {
-        return `${this.value}`;
-    }
 
     static [Import](data) {
         return new Number(data);
@@ -142,7 +139,7 @@ const compilerData = [
 ];
 
 const consoleLog = fromData(data, codeClassLoader);
-const consoleLogCompiler = controllerFromData(consoleLog, compilerData, compilerClassLoader);
+const consoleLogCompiler = controllerFromData(consoleLog, "compiler", compilerData, compilerClassLoader);
 console.log(consoleLogCompiler.compile());
 consoleLog.args[0].input.value = 7;
 console.log(consoleLogCompiler.compile());

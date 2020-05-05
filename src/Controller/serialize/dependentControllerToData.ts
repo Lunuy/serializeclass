@@ -5,12 +5,12 @@ import InstanceData from "../../Data/InstanceData";
 import { DependentControllerClassLoader } from "./dependentControllerFromData";
 
 
-function dependentControllerToData<TARGET, ID, DATA, INSTANCE extends SerializableInstance<ID>>(serializableInstance : INSTANCE, classLoader : DependentControllerClassLoader<TARGET, ID, DATA, INSTANCE>) : DATA {
+function dependentControllerToData<TARGET, ID, DATA, INSTANCE extends SerializableInstance<ID, any>>(serializableInstance : INSTANCE, classLoader : DependentControllerClassLoader<TARGET, ID, DATA, INSTANCE>) : DATA {
     return (
         classLoader(serializableInstance[ID])
         [Export](
             serializableInstance,
-            (serializableInstance : SerializableInstance<ID>) => {
+            (serializableInstance : SerializableInstance<ID, any>) => {
                 return dependentControllerToData(serializableInstance, classLoader);
             }
         )
